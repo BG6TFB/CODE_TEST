@@ -1,0 +1,126 @@
+//#include<stdio.h>
+//int main()
+//{
+//	int year=0;//入职年数
+//	int time=0;//周工作时间
+//	double m=0.0;
+//	scanf("%d %d",&year,&time);
+//	//老员工
+//	if(year>=5)
+//	{
+//		//周工作不超过40小时
+//		if(time<=40)
+//		{
+//			m=time*50;
+//		}
+//		//周工作时间超过40小时
+//		else
+//		{
+//			m=2000+(time-40)*75;
+//		}
+//	}
+//	//新员工
+//	else
+//	{
+//		//周工作不超过40小时
+//		if(time<=40)
+//		{
+//			m=time*30;
+//		}
+//		//周工作时间超过40小时
+//		else
+//		{
+//			m=1200+(time-40)*45;
+//		}
+//	}
+//
+//	printf("%.2lf",m);
+//	return 0;
+//}
+
+//
+//#include<stdio.h>
+//int main()
+//{
+//	printf("------------------------------------\n");
+//	printf("Province      Area(km2)   Pop.(10K)\n");
+//	printf("------------------------------------\n");
+//	printf("Anhui         139600.00   6461.00\n");
+//	printf("Beijing        16410.54   1180.70\n");
+//	printf("Chongqing      82400.00   3144.23\n");
+//	printf("Shanghai        6340.50   1360.26\n");
+//	printf("Zhejiang      101800.00   4894.00\n");
+//	printf("------------------------------------\n");
+//
+//
+//	return 0;
+//}
+
+
+#include <stdio.h>
+#include <math.h>
+
+int IsTheNumber ( const int N )
+{
+	int y=0;
+	int m=0;
+	int n=0;
+	int x=0;
+	int M=N;//因为给的N是const修饰，无法修改，所以将M=N，用于获取每一位数字
+    int i,j=0;
+    int a[10];//定义存储每一位数字的数组
+ 
+    while(M>=10)
+    {
+        a[j++]=M%10;//将除最高位之外的每一位数字存储到数组中
+        M=M/10;
+    }
+    a[j]=M;//最后将最高的那位数字存储到数组中
+ 
+     x=(int)sqrt(N*1.0);//将N开平方时候强转成int
+    
+	
+		y=x*x;//计算x的平方
+ 
+    
+    for(m=0; m<=j; m++)
+    {
+        for(n=m+1; n<=j; n++)
+        {
+            //两次循环数组，注意n是从m+1开始的，也就是只与其后边的比较即可
+            if(a[m]==a[n])//如果出现了一组相同的数字
+            {
+				
+                if(y==N)//然后判断N是否是完全平方数
+                {
+                    return 1;//直接就返回1
+                }
+                else
+                {
+                    return 0;
+                }
+ 
+            }
+        }
+    }
+ 
+    return 0;
+
+}
+
+int main()
+{
+    int n1, n2, i, cnt;
+    
+    scanf("%d %d", &n1, &n2);
+    cnt = 0;
+    for ( i=n1; i<=n2; i++ ) {
+        if ( IsTheNumber(i) )
+            cnt++;
+    }
+    printf("cnt = %d\n", cnt);
+
+    return 0;
+}
+
+/* 你的代码将被嵌在这里 */

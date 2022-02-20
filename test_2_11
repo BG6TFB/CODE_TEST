@@ -1,0 +1,137 @@
+//#include<stdio.h>
+//int main()
+//{
+//	int a=0;
+//	int b=0;
+//	scanf("%d:%d",&a,&b);
+//	if(a>=12)
+//	{
+//		if(a>12)
+//		{
+//			a=a-12;
+//		}
+//		
+//		printf("%d:%d PM",a,b);
+//	}
+//	else
+//		printf("%d:%d AM",a,b);
+//
+//	
+//	return 0;
+//}
+
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int speed=0;
+//	scanf("%d",&speed);
+//	if(speed>60)
+//	{
+//		printf("Speed: %d - Speeding",speed);
+//	}
+//	else
+//		printf("Speed: %d - OK",speed);
+//	return 0;
+//}
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a=0;
+//	int b=0;
+//	int c=0;
+//	scanf("%d %d %d",&a,&b,&c);
+//	if(a==b)
+//		printf("C");
+//	else if(a==c)
+//		printf("B");
+//	if(c==b)
+//		printf("A");
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	float x=0;
+//	double y=0.0;
+//	scanf("%f",&x);
+//	if(x<=15)
+//	{
+//		y=4*x/3;
+//	}
+//	else if(x>15)
+//		y=2.5*x-17.5;
+//	printf("%.2lf",y);
+//	return 0;
+//}
+
+//
+//#include<stdio.h>
+//int main()
+//{
+//	int a,c;
+//	char b;
+//	scanf("%d %c %d",&a,&b,&c);
+//	switch(b)
+//	{
+//		case'+':
+//			printf("%d",a+c);
+//			break;
+//		case'-':
+//			printf("%d",a-c);
+//			break;
+//		case'*':
+//			printf("%d",a*c);
+//			break;
+//		case'/':
+//			printf("%d",a/c);
+//			break;
+//		case'%':
+//			printf("%d",a%c);
+//			break;
+//		default:
+//			printf("ERROR");
+//	}
+//	return 0;
+//}
+
+#include<stdio.h>
+int main()
+{
+	int n,f,y,i,j;
+	scanf("%d",&n);
+	for(y=0;y<100;y++)
+	{
+		for(f=0;f<100;f++)
+		{
+			if(200*y+2*f==f*100+y-n)
+			{
+				printf("%d.%d",y,f);
+				return 0;
+			}
+			
+		}
+	}
+	printf("No Solution");
+	return 0;
+
+}
+//
+//#include <stdio.h>
+//
+//int main()
+//{
+//    int n,f,y,i,j;
+//    scanf("%d",&n);
+//    for(y=0;y<100;y++)
+//        for(f=0;f<100;f++)
+//            if(200*y+2*f==f*100+y-n){
+//                printf("%d.%d",y,f);
+//                return 0;
+//            }
+//    printf("No Solution");
+//    return 0;
+//}

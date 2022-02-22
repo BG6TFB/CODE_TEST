@@ -1,0 +1,105 @@
+//#include<stdio.h>
+//
+//void sob(int a)
+//{
+//	
+//	switch(a)
+//	{
+//	case 0:
+//		printf("ling ");
+//		break;
+//	case 1:
+//		printf("yi ");
+//		break;
+//	case 2:
+//		printf("er ");
+//		break;
+//	case 3:
+//		printf("san ");
+//		break;
+//	case 4:
+//		printf("si ");
+//		break;
+//	case 5:
+//		printf("wu ");
+//		break;
+//	case 6:
+//		printf("liu ");
+//		break;
+//	case 7:
+//		printf("qi ");
+//		break;
+//	case 8:
+//		printf("ba ");
+//		break;
+//	case 9:
+//		printf("jiu ");
+//		break;
+//	}
+//}
+//
+////计算输入了几位数
+//int size(int a)
+//{
+//	int sz=0;
+//	while(a)
+//	{
+//		a=a/10;
+//		sz++;
+//	}
+//	return sz;
+//}
+//
+////顺序摆正
+//
+//
+//
+//int main()
+//{
+//	int a=0;
+//	int i=0;
+//	int j=0;
+//	int sz;
+//	int arr[]={0};
+//	scanf("%d",&a);
+//	sz=size(a);
+//	for(i=0;i<sz;i++)
+//	{
+//		int b=0;
+//		b=a%10;
+//		arr[i]=b;
+//		//sob(b);
+//		a=a/10;
+//	}
+//	for(j=sz;j>0;j--)
+//	{
+//		int k=arr[j];
+//		sob(k);
+//	}
+//	return 0;
+//}
+
+
+#include<stdio.h>
+int main(void)
+{
+char c;
+c=getchar();
+while(c!='n'){
+if(c=='-') printf("fu");
+else if(c=='0') printf("ling");
+else if(c=='1') printf("yi");
+else if(c=='2') printf("er");
+else if(c=='3') printf("san");
+else if(c=='4') printf("si");
+else if(c=='5') printf("wu");
+else if(c=='6') printf("liu");
+else if(c=='7') printf("qi");
+else if(c=='8') printf("ba");
+else if(c=='9') printf("jiu");
+c=getchar();
+if(c!='\n')
+printf(" ");
+}
+return 0;
+}

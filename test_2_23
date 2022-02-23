@@ -1,0 +1,34 @@
+//#include<stdio.h>
+//#include<string.h>
+//
+//int main()
+//{
+//	char arr[]="zpw@biteu.tech";
+//	char* p="@.";
+//	char buf[1024]={0};
+//	strcpy(buf,arr);
+//	char* ret= NULL;
+//	for(ret = strtok(arr,p);ret!=NULL;ret=strtok(NULL,p))
+//	{
+//		printf("%s\n",ret);
+//	}
+//	return 0;
+//}
+
+#include<stdio.h>
+#include<ctype.h>
+int main()
+{
+	int i=0;
+	char arr[]="I Am A StuDENT";
+	while(arr[i])
+	{
+		if(isupper(arr[i]))
+		{
+			arr[i]=tolower(arr[i]);
+		}
+		i++;
+	}
+	printf("%s\n",arr);
+	return 0;
+}

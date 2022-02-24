@@ -1,0 +1,67 @@
+//#include<stdio.h>
+//#include<string.h>
+//int main()
+//{
+//	int arr1[]={1,2,3,4,5};
+//	int arr2[]={1,2,5,4,3};
+//	int ret=memcmp(arr1,arr2,8);
+//	printf("%d\n",ret);
+//	return 0;
+//}
+
+
+#include<stdio.h>
+//声明一个结构体类型
+struct stu
+{
+	//成员变量
+	char name[20];
+	char tele[12];
+	char se[10];
+	int age;
+}s4,s5,s6;
+//全局变量
+struct stu s3;
+
+//int main()
+//{
+//	int num;
+//	char c;
+//	//创建的结构体变量
+//	struct stu s1;
+//	struct stu s2;
+//
+//	return 0;
+//}
+
+
+////重命名
+//typedef struct node
+//{
+//	int data;
+//	struct node* next;
+//
+//}node;
+//int main()
+//{
+//
+//	struct node n1;
+//	node n2;
+//	return 0;
+//}
+
+
+
+struct s
+{
+	char c;
+	int a;
+	double d;
+	char arr[20];
+};
+int mian()
+{
+	struct s s={'c',100,3.14,"hello"};
+	printf("%c %d %lf %s",s.c,s.a,s.d,s.a);
+	return 0;
+}v
